@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>publishSuccess</title>
+    <script>
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+            var context = "";
+            if (r != null)
+                context = r[2];
+            reg = null;
+            r = null;
+            return context == null || context == "" || context == "undefined" ? "" : context;
+        }
+         var strategyId  = GetQueryString("strategyId");
+        // alert(strategyId);
+    </script>
+</head>
+<body>
+<p>修改成功，您可以</p>
+<script>
+    document.write("<a href="+strategyId+"\"../strategy.php?strategyId=\">点击查看</a>");
+</script>
+<!--<a href="../strategypage/strategyDemo.html"> 点击查看</a>-->
+<a href = "../../home/home.html">返回主页</a>
+</body>
+</html>

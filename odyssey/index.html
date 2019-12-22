@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>欢迎来到odyssey</title>
+<bgsound src="music/background.mp3" loop="-1"></bgsound>
+<style type="text/css"></style>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="content-wrap">
+  <section id="home">
+    <div class="container">
+      <div class="row">
+        <div class="fix-content">
+          <div class="main-content">
+            <h1>欢迎来到Odyssey</h1>
+            <br>
+            <marquee style="WIDTH: 388px; HEIGHT: 60px" scrollamount="1" direction="up" scrolldelay="4">
+            <center>
+              <p ><font color="#2A2A2A" size="3" >odyssey是一个智能旅游网站。</font ></p >
+              <p ><font color="#2A2A2A" size="3" >该网站集旅游攻略，景点介绍于一身，</font ></p >
+              <p ><font color="#2A2A2A" size="3" >一站式为用户解决对景点了解太少，出行难等一系列问题。</font ></p >
+              <p ><font color="#2A2A2A" size="3" >在这里，你可以收藏自己喜欢的攻略与景点，</font ></p >
+              <p ><font color="#2A2A2A" size="3" >并将其添加到自己的日程安排之中。</font ></p >
+              <p ><font color="#2A2A2A" size="3" >让他人了解关于你，关于这个世界的绚烂与美好。</font ></p >
+              <p ><font color="#2A2A2A" size="3" >当身与心至少有一个在路上的时候，</font ></p >
+              <p ><font color="#2A2A2A" size="3" >别忘了odyssey的陪伴。</font ></p>
+            </center>
+            </marquee >
+            <div><br>
+              <br>
+              <button class="btn-default" id="enter">点击进入</button>
+              <script type="text/javascript">
+				var btn=document.getElementById("enter");
+                 btn.onclick=function()
+				 {
+					 window.location.href="home/home.php";
+            	     alert("欢迎来到Odyssey");
+				 }
+				
+				</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

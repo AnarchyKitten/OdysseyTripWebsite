@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Alpha</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<script>
+            function GetQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+                var context = "";
+                if (r != null)
+                    context = r[2];
+                reg = null;
+                r = null;
+                return context == null || context == "" || context == "undefined" ? "" : context;
+            }
+            var strategyId  = GetQueryString("strategyId");
+            // alert(strategyId);
+		</script>
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2></h2>
+				<p>您的攻略发布成功</p>
+				<ul class="actions">
+					<li>
+						<script>
+                        document.write("<a href=\"../strategypage/strategy.php?strategyId="+strategyId+"\" class=\"button special\">点击查看</a>");
+					</script>
+					</li>
+					<li><a href="../home/home.php" class="button">回到主页</a></li>
+				</ul>
+			</section>
+            
+
+		<!-- Main -->
+
+	</body>
+</html>

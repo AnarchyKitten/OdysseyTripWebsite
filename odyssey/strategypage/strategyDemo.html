@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //拿攻略ID
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+            var context = "";
+            if (r != null)
+                context = r[2];
+            reg = null;
+            r = null;
+            return context == null || context == "" || context == "undefined" ? "" : context;
+        }
+        var strategyId  = GetQueryString("strategyId");
+        // alert(strategyId);
+        //发送查询请求
+        var xmlhttp;
+        // if (strategyId.length==0)
+        // {
+        //     document.getElementById("txtHint").innerHTML="";
+        //     return;
+        // }
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.open("GET","showStrategy.php?strategyId="+strategyId,true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                var data = xmlhttp.responseText;
+                data=JSON.parse(data);
+                var title = data.title;
+                // alert(title);
+                var content = data.content;
+                document.getElementById("title").innerHTML = title;
+                document.getElementById("content").innerHTML = content;
+            }
+        }
+        xmlhttp.send();
+    </script>
+    <meta charset="UTF-8">
+    <title>攻略</title>
+</head>
+<body>
+<p>title:</p><span id = "title"><br/></span>
+<p>content:</p><span id = "content"></span>
+
+</body>
+</html>

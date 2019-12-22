@@ -1,0 +1,227 @@
+@font-face {
+	font-family: 'Glyphter';
+	src: url('../fonts/Glyphter.eot');
+	src: url('../fonts/Glyphter?#iefix') format('embedded-opentype'), url('../fonts/Glyphter.woff') format('woff'), url('../fonts/Glyphter.ttf') format('truetype'), url('../fonts/Glyphter.svg#Glyphter') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, html {
+	left: 0;
+	top: 0;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	width: 100%;
+}
+body {
+	color: #2f2f2f;
+	font-size: 16px;
+	line-height: 1.7;
+	background-color: #fff;
+}
+a {
+	color: #2f2f2f;
+	text-decoration: none;
+	transition: ease .6s;
+	-webkit-transition: ease .6s;
+	-moz-transition: ease .6s;
+	-o-transition: ease .6s;
+	-ms-transition: ease .6s;
+}
+a:hover {
+	text-decoration: none;
+	color: #818181;
+}
+a:focus {
+	outline: none;
+	color: #999999;
+	text-decoration: none;
+}
+iframe {
+	border: none;
+	width: 100%;
+}
+img {
+	max-width: 100%;
+}
+*:focus {
+	outline: none;
+}
+.no-pad {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.pad-80 {
+	padding-top: 80px;
+}
+.mar-t-50 {
+	margin-top: 50px !important;
+}
+.mar-tm-10 {
+	margin-top: -10px;
+}
+.white-col {
+	background: #ffffff;
+	padding: none;
+}
+.content-wrap {
+	-webkit-overflow-scrolling: touch;
+	height: 100%;
+	width: 100%;
+}
+.content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.content::before {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+	-webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
+	transition: opacity 0.4s, transform 0s 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+h1, h2, h3, h4, h5 {
+	letter-spacing: 0.8px;
+	font-family: 'Roboto Slab', serif;
+}
+p {
+	letter-spacing: 0.5px;
+	font-size: 13px;
+	line-height: 34px;
+	font-weight: 300;
+}
+#home #cal_home h1 {
+	line-height: 40px;
+	letter-spacing: 0.6px;
+}
+#home #cal_home .typed {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 1.5px;
+	margin: 0 auto;
+	opacity: 0.6;
+}
+#home {
+	background: url('../images/hero1.jpeg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.fix-content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.main-content {
+	position: absolute;
+	text-align: center;
+	min-width: 300px;
+	left: 50%;
+	top: 50%;
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	background: rgba(255, 255, 255, 0.8);
+	outline: 4px double #FFFFFF;
+	outline-offset: 8px;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+ @-webkit-keyframes scrolling {
+ 0% {
+top:2px;
+opacity: 0;
+}
+ 30% {
+top:8px;
+opacity: 1;
+}
+ 100% {
+top:16px;
+opacity: 0;
+}
+}
+ @keyframes scrolling {
+ 0% {
+top:2px;
+opacity: 0;
+}
+ 30% {
+top:8px;
+opacity: 1;
+}
+ 100% {
+top:16px;
+opacity: 0;
+}
+}
+#cal_home {
+	background-image: url(../images/bg2.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	min-width: 100%;
+	min-height: 100%;
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+.my-content {
+	top: 35%;
+	border: 4px double #FFFFFF;
+	color: #000000;
+	text-align: center;
+	border-collapse: separate;
+	position: fixed;
+	left: 50%;
+	min-width: 300px;
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+	background: rgba(255, 255, 255, 0.8);
+	outline: 4px double #FFFFFF;
+	outline-offset: 8px;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+.content-wrap #cal_home .bottom {
+	top: auto;
+	bottom: 0%;
+}
+
+.content-wrap #cal_home .bottom {
+}
+.bottom {
+	bottom: 20px;
+	position: fixed;
+}
